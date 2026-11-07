@@ -1,0 +1,29 @@
+name: Test Homebrew formula
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tap from this checkout
+        run: |
+          brew tap silex-ai-lab/tap "$GITHUB_WORKSPACE"
+          brew install --build-from-source silex-ai-lab/tap/vibra
+      - name: Check installed app
+        run: brew test silex-ai-lab/tap/vibra
+      - name: Audit formula
+        run: brew audit --strict silex-ai-lab/tap/vibra
+      - name: Check style
+        run: brew style Formula/vibra.rb
