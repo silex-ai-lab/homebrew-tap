@@ -14,7 +14,7 @@ open "$(brew --prefix vibra)/Vibra.app"
 
 If the Command Line Tools are missing, run `xcode-select --install`. If Swift is older than 6.1, update the Command Line Tools through Software Update or install a compatible Xcode version.
 
-Homebrew downloads a checksum-verified source archive and builds on your Mac. The first installation takes longer than a prebuilt app download. This tap does not publish bottles. This repository's CI builds, tests and audits the formula from source on GitHub's macOS 15 runners (Swift 6.1.2), on Apple Silicon and Intel.
+Homebrew downloads a checksum-verified source archive and builds on your Mac. The first installation takes longer than a prebuilt app download. This tap does not publish bottles. This repository's CI builds Vibra from source, runs the formula test and audits the formula on GitHub's macOS 15 runners (Swift 6.1.2), on Apple Silicon and Intel.
 
 Vibra lives in Homebrew's Cellar. Its menu bar item is the main interface. The formula also installs the `vibra` command.
 

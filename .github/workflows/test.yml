@@ -17,6 +17,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+      - name: Toolchain
+        run: swift --version
       - name: Install tap from this checkout
         run: |
           brew tap silex-ai-lab/tap "$GITHUB_WORKSPACE"
