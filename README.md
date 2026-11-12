@@ -4,7 +4,7 @@ Install [Vibra](https://github.com/silex-ai-lab/silex_vibra), a menu bar monitor
 
 ## Install
 
-You need macOS 14 or later, [Homebrew](https://brew.sh), and Swift 6 or later. Apple's Command Line Tools are enough. A full Xcode installation is not required.
+You need macOS 14 or later, [Homebrew](https://brew.sh), and Swift 6.1 or later. Apple's Command Line Tools are enough. A full Xcode installation is not required.
 
 ```sh
 swift --version
@@ -12,9 +12,9 @@ brew install silex-ai-lab/tap/vibra
 open "$(brew --prefix vibra)/Vibra.app"
 ```
 
-If the Command Line Tools are missing, run `xcode-select --install`. If Swift is older than 6, update the Command Line Tools through Software Update or install a compatible Xcode version.
+If the Command Line Tools are missing, run `xcode-select --install`. If Swift is older than 6.1, update the Command Line Tools through Software Update or install a compatible Xcode version.
 
-Homebrew downloads a checksum-verified source archive and builds on your Mac. The first installation takes longer than a prebuilt app download. This tap does not publish bottles.
+Homebrew downloads a checksum-verified source archive and builds on your Mac. The first installation takes longer than a prebuilt app download. This tap does not publish bottles. This repository's CI builds Vibra from source, runs the formula test and audits the formula on GitHub's macOS 15 runners (Swift 6.1.2), on Apple Silicon and Intel.
 
 Vibra lives in Homebrew's Cellar. Its menu bar item is the main interface. The formula also installs the `vibra` command.
 
