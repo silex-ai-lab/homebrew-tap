@@ -1,9 +1,9 @@
 class Vibra < Formula
   desc "Menu bar monitor for local AI coding agents"
   homepage "https://github.com/silex-ai-lab/silex_vibra"
-  url "https://github.com/silex-ai-lab/silex_vibra/archive/ada7ac6b46b59c866d7149be60ba0cc6ba82f1a8.tar.gz"
-  version "0.4.0"
-  sha256 "9fcd1e2e790d9754bf5a3d347142ea013ddb5bfe228e6f9e59221da55f285907"
+  url "https://github.com/silex-ai-lab/silex_vibra/archive/0a3afca484376242f07abc34edd2ccc8b8f053dd.tar.gz"
+  version "0.4.1"
+  sha256 "c8e0c835099895f3f5cc6fc17b95d18fa0dc6681f86937e74b3c01ba7f94a7ab"
   license "Apache-2.0"
 
   depends_on macos: :sonoma
